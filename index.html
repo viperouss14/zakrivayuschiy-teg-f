@@ -77,7 +77,7 @@
             Фритрек и нулевой спринт: Подготовка&nbsp;к&nbsp;работе
           </h3>
           <div class="card__image-container">
-            <picture>
+            <picture class="filter__invert">
               <source srcset="/images/image.avif" type="image/avif" />
               <source srcset="/images/image.webp" type="image/webp" />
               <img
@@ -443,7 +443,6 @@
             </div>
           </div>
         </article>
-
         <article class="card">
           <h3 class="card__title">3 спринт: Обходные стратегии</h3>
           <div class="card__image-container">
@@ -668,7 +667,12 @@
           </div>
         </article>
       </section>
-      <button type="button" class="button save__button button__effects" onclick="window['dialog'].showModal();" aria-controls="dialog">
+      <button
+        type="button"
+        class="button save__button button__effects"
+        onclick="window['dialog'].showModal();"
+        aria-controls="dialog"
+      >
         <svg class="button__svg" viewBox="0 0 21 21">
           <use href="./svg/floppy.svg#floppy-disk"></use>
         </svg>
@@ -683,7 +687,11 @@
           <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
         </div>
         <form method="dialog">
-          <button type="button" class="button dialog__button button__effects" onclick="window['dialog'].close();">
+          <button
+            type="button"
+            class="button dialog__button button__effects"
+            onclick="window['dialog'].close();"
+          >
             <span class="button__text dialog__button-text">ok</span>
           </button>
         </form>
