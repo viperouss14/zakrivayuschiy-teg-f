@@ -307,7 +307,7 @@
 }
 
 .filter__multiply {
-  filter: hue-rotate(45deg) saturate(2) brightness(0.5);
+  filter: hue-rotate(45deg) saturate(2);
 }
 
 .filter__opacity {
