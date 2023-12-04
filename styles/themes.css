@@ -4,3 +4,107 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-dark {
+  --title-font-weight: 785;
+  --text-font-weight: 465;
+  --background-color: #000;
+  --themes-main-color: #00cc14;
+  --variable-background-image: repeating-linear-gradient(
+      to right,
+      #000 0,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #000 0,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
+  --color-animation-button: #00cc14;
+  --heart-color: #00cc14;
+  --heart-core-color: #000;
+}
+
+:root.theme-light {
+  --title-font-weight: 700;
+  --text-font-weight: 400;
+  --background-color: #fff;
+  --themes-main-color: #000;
+  --variable-background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --color-animation-button: #fff;
+  --heart-color: #000;
+  --heart-core-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --title-font-weight: 785;
+    --text-font-weight: 465;
+    --background-color: #000;
+    --themes-main-color: #00cc14;
+    --variable-background-image: repeating-linear-gradient(
+        to right,
+        #000 0,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        #000 0,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
+    --color-animation-button: #00cc14;
+    --heart-color: #00cc14;
+    --heart-core-color: #000;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --title-font-weight: 700;
+    --text-font-weight: 400;
+    --background-color: #fff;
+    --themes-main-color: #000;
+    --variable-background-image: repeating-linear-gradient(
+        to right,
+        #d3d3d3 0,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        #d3d3d3 0,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+    --color-animation-button: #fff;
+    --heart-color: #000;
+    --heart-core-color: #fff;
+  }
+}

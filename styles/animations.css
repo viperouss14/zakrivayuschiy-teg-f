@@ -12,3 +12,143 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/****** Анимация стрелочки меню ******/
+
+@keyframes arrow-move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(4px);
+  }
+}
+
+/****** Эффекты для кнопки Like ******/
+
+.button__effects {
+  position: relative;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 90%;
+  transition: box-shadow 0.3s ease;
+}
+
+.button__effects::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  background: var(--color-animation-button);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  mix-blend-mode: difference;
+}
+
+.button__effects:hover::after {
+  transform: scaleX(1);
+}
+
+.button__effects:focus {
+  outline: none;
+}
+
+.button__effects:focus-visible {
+  box-shadow: 2px 2px 0 var(--themes-main-color);
+}
+
+/****** Анимация сердечка ******/
+
+.sparks {
+  opacity: 0;
+}
+
+.core,
+.main-body {
+  fill: var(--heart-core-color);
+}
+
+.contour,
+.card__icon-button:hover .core,
+.card__icon-button:hover .main-body {
+  fill: var(--heart-color);
+}
+
+.card__icon-button:active .core,
+.card__icon-button:active .main-body,
+.like-icon.is-liked .core,
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .contour {
+  fill: var(--heart-sparks-color);
+}
+
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .core,
+.card__icon-button:active .core {
+  transition: fill 0.3s;
+}
+
+.card__icon-button:hover .main-body,
+.card__icon-button:active .main-body {
+  transition: fill 0.3s linear 0.05s;
+}
+
+.heart {
+  transform-origin: center;
+}
+
+.like-icon.is-liked .core {
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 0.3s linear 0.06s;
+}
+
+@keyframes heart-scale {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s alternate;
+}
+
+@keyframes heart-sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.like-icon.is-liked .sparks {
+  animation: heart-sparks 0.3s ease-in 0.3s alternate;
+}
