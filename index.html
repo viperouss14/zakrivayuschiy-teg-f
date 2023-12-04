@@ -7,12 +7,12 @@
       name="description"
       content="Страница о результатах обучения вёрстке — итог четырёх спринтов в Яндекс Практикуме"
     />
-    <meta proprety="og:title" content="Закрывающий тег" />
+    <meta property="og:title" content="Закрывающий тег" />
     <meta
-      proprety="og:description"
+      property="og:description"
       content="Страница о результатах обучения вёрстке — итог четырёх спринтов в Яндекс Практикуме"
     />
-    <meta proprety="og:image" content="/images/og.jpg" />
+    <meta property="og:image" content="/images/og.jpg" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta name="color-scheme" content="dark light" />
     <link
@@ -220,7 +220,7 @@
         <article class="card">
           <h3 class="card__title">1 спринт: А если не получится?</h3>
           <div class="card__image-container">
-            <picture class="filter__multy">
+            <picture class="filter__contrast">
               <source
                 srcset="/images/WhatIfItDoesn'tWorkOut.avif"
                 type="image/avif"
@@ -296,7 +296,7 @@
         <article class="card">
           <h3 class="card__title">2 спринт: Погоня за идеалом</h3>
           <div class="card__image-container">
-            <picture class="filter__hue-rotate">
+            <picture class="filter__multiply">
               <source srcset="/images/ChasingTheIdeal.avif" type="image/avif" />
               <source srcset="/images/ChasingTheIdeal.webp" type="image/webp" />
               <img
@@ -369,7 +369,7 @@
         <article class="card">
           <h3 class="card__title">2 спринт: О тех, кто рядом</h3>
           <div class="card__image-container">
-            <picture class="filter__care">
+            <picture class="filter__opacity">
               <source
                 srcset="/images/AboutThoseWhoAreNearby.avif"
                 type="image/avif"
@@ -526,8 +526,8 @@
           <h3 class="card__title">3 спринт: Когда опускаются руки</h3>
           <div class="card__image-container">
             <picture class="filter__blur">
-              <source srcset="" type="image/avif" />
-              <source srcset="" type="image/webp" />
+              <source srcset="/images/WhenYouGiveUp.avif" type="image/avif" />
+              <source srcset="/images/WhenYouGiveUp.webp" type="image/webp" />
               <img
                 class="card__image"
                 loading="lazy"
@@ -668,9 +668,9 @@
           </div>
         </article>
       </section>
-      <button type="button" class="button save__button button__effects" onclick="window['dialog'].showModal();" aria-controls="dialog-id">
+      <button type="button" class="button save__button button__effects" onclick="window['dialog'].showModal();" aria-controls="dialog">
         <svg class="button__svg" viewBox="0 0 21 21">
-          <use href="./svg/floppy.svg#floppy-disk">
+          <use href="./svg/floppy.svg#floppy-disk"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
@@ -678,7 +678,7 @@
       <dialog id="dialog" class="dialog">
         <div class="dialog__header">
           <svg class="dialog__svg" viewBox="0 0 21 21">
-            <use href="./svg/floppy.svg#floppy-disk">
+            <use href="./svg/floppy.svg#floppy-disk"></use>
           </svg>
           <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
         </div>

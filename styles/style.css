@@ -302,20 +302,20 @@
   filter: grayscale(0.8);
 }
 
-.filter__multy {
-    filter: brightness(3) blur(0.4px) contrast(0.5);
+.filter__contrast {
+    filter: contrast(0.6);
 }
 
-.filter__hue-rotate {
+.filter__multiply {
   filter: hue-rotate(45deg) saturate(2) brightness(0.5);
 }
 
-.filter__care {
-  filter: hue-rotate(340deg) contrast(1.2);
+.filter__opacity {
+  filter: opacity(0.8);
 }
 
 .filter__sepia {
-  filter: sepia(0.5) invert(0.2);
+  filter: sepia(0.5);
 }
 
 .filter__blur {
