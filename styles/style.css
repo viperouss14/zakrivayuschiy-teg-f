@@ -298,10 +298,6 @@
   inline-size: 100%;
 }
 
-.filter__invert {
-  filter: invert(0.1);
-}
-
 .filter__grayscale {
   filter: grayscale(0.8);
 }
@@ -311,7 +307,7 @@
 }
 
 .filter__multiply {
-  filter: hue-rotate(45deg) saturate(2);
+  filter: hue-rotate(45deg) saturate(2) invert(0.1);
 }
 
 .filter__opacity {
