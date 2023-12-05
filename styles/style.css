@@ -165,7 +165,6 @@
 
 .card__image-label {
   position: absolute;
-  /*Извиняюсь, если не правильно понял, но координты заданы через inset. Нужно заменить на top and right?*/
   opacity: 0.5;
   font-family: var(--accent-font, 'Press Start 2p');
   font-size: 14px;
