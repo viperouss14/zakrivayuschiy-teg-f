@@ -27,7 +27,7 @@
 
 /****** Эффекты для кнопки Like ******/
 
-.button__effects {
+.button--effects {
   position: relative;
   font-family: var(--accent-font);
   font-size: 14px;
@@ -35,7 +35,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.button__effects::after {
+.button--effects::after {
   content: '';
   position: absolute;
   z-index: 1;
@@ -50,15 +50,15 @@
   mix-blend-mode: difference;
 }
 
-.button__effects:hover::after {
+.button--effects:hover::after {
   transform: scaleX(1);
 }
 
-.button__effects:focus {
+.button--effects:focus {
   outline: none;
 }
 
-.button__effects:focus-visible {
+.button--effects:focus-visible {
   box-shadow: 2px 2px 0 var(--themes-main-color);
 }
 

@@ -34,7 +34,7 @@
   min-block-size: clamp(323px, 19.285rem + 3.85vw, 364px);
 }
 
-.content__width {
+.page__content {
   inline-size: var(--content-width);
 }
 
@@ -133,11 +133,11 @@
   display: grid;
   gap: clamp(50px, 2.971rem + 0.657vw, 57px);
   margin: 0 auto;
-  background-color: var(--background-color);
 }
 
 .card {
   outline: 2px solid currentColor;
+  background-color: var(--background-color);
 }
 
 .card__title {
@@ -165,7 +165,7 @@
 
 .card__image-label {
   position: absolute;
-  /* z-index: 1; */
+  /*Извиняюсь, если не правильно понял, но координты заданы через inset. Нужно заменить на top and right?*/
   opacity: 0.5;
   font-family: var(--accent-font, 'Press Start 2p');
   font-size: 14px;
@@ -175,7 +175,7 @@
   mix-blend-mode: hard-light;
 }
 
-.card__image-label-upper {
+.card__image-label--upper {
   text-transform: uppercase;
 }
 
@@ -227,18 +227,18 @@
 
 .card__like-button {
   inline-size: 130px;
-  block-size: 38px;
+  min-block-size: 38px;
 }
 
 .button__text {
   color: var(--themes-main-color);
 }
 
-.save__button {
+.button__save {
   display: flex;
   align-items: center;
   gap: 9px;
-  margin: 54px auto 102px;
+  margin: 54px auto 105px;
   padding: 15px 20px;
   background-color: var(--background-color);
 }
@@ -249,6 +249,10 @@
 }
 
 .dialog {
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 20px;
   padding: 31px;
   color: var(--themes-main-color);
   background-color: var(--background-color);
@@ -257,13 +261,6 @@
 
 .dialog[open] {
   display: grid;
-  gap: 30px;
-}
-
-.dialog__header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
 }
 
 .dialog::backdrop {
@@ -293,9 +290,13 @@
   block-size: 39px;
 }
 
+.dialog__form {
+  display: contents;
+}
+
 .dialog__button {
+  grid-column: span 2;
   padding-block: 12px;
-  inline-size: 100%;
 }
 
 .filter__grayscale {
@@ -326,13 +327,14 @@
   filter: brightness(5);
 }
 
-@media (width <= 375px) {
-  .content__width {
+@media (width < 376px) {
+  .page__content {
     --content-width: 100vw;
   }
 
-  .save__button {
+  .button__save {
     flex-direction: column;
+    margin: 54px auto 102px;
   }
 
   .button__svg {
