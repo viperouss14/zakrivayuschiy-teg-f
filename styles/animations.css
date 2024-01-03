@@ -25,6 +25,31 @@
   }
 }
 
+.theme-menu__button::before {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 2px;
+}
+
+.theme-menu__button:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:disabled::after {
+  content: '▶';
+  position: absolute;
+  opacity: 0.6;
+  animation: arrow-move 0.5s ease-in-out infinite alternate;
+  inset-inline-start: -14px;
+}
+
 /****** Эффекты для кнопки Like ******/
 
 .button--effects {
